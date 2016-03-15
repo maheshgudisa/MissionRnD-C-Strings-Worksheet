@@ -10,7 +10,18 @@ ERROR CASES: Return '\0' for invalid inputs.
 
 NOTES: Don't create new string.
 */
-
-char removeSpaces(char *str) {
+#include<stdio.h>
+char *removeSpaces(char *str) {
+	int i=0,j=0;
+	if(str==" "||str==NULL)
 	return '\0';
+	while(str[i]!='\0'){
+		if(str[i]!=' '){
+		str[j]=str[i];
+		j++;	
+		}
+		i++;
+	}
+	str[j]='\0';
+	return str;
 }
